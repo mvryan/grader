@@ -1,6 +1,7 @@
 package com.evllabs.grader.structures;
 
 import java.util.*;
+import java.util.Map.Entry;
 
 public class Histogram {
 	
@@ -34,6 +35,11 @@ public class Histogram {
 		}
 		return value;
 	}
+	
+	public Set<Entry<String, Integer>> entrySet(){
+		return histogram.entrySet();
+	}
+	
 	public int totalElements(){
 		return total;
 	}
