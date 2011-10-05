@@ -54,7 +54,7 @@ public class Grader {
 				resultBuilder.append(i+1);
 				Set<Entry<String, Integer>> rankSet = current.get(i).entrySet();
 				for(Entry<String, Integer> rankEntry : rankSet){
-					resultBuilder.append(" ").append(rankEntry.getKey()).append(":").append(rankEntry.getValue()).append("(").append(rankEntry.getValue()/total).append("%)");
+					resultBuilder.append(" ").append(rankEntry.getKey()).append(":").append(rankEntry.getValue()).append("(").append(100*(rankEntry.getValue()/total)).append("%)");
 				}
 				System.out.println(resultBuilder.toString());
 			}
