@@ -32,7 +32,7 @@ public class Grader {
 					counter = 0;
 					continue;
 				}
-				int rank = counter -5;
+				int rank = counter - 6;
 				Histogram currentRank;
 				try{
 					currentRank = currentRanks.get(rank);
