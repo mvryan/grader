@@ -1,6 +1,7 @@
 package com.evllabs.grader;
 
 import java.util.*;
+import java.util.Map.Entry;
 
 import com.evllabs.grader.structures.Histogram;
 
@@ -43,7 +44,21 @@ public class Grader {
 			}
 			counter++;
 		}
-		
+		Set<Entry<String,List<Histogram>>> rankEntries = ranks.entrySet();
+		for(Entry<String, List<Histogram>> entry : rankEntries){
+			List<Histogram> current = entry.getValue();
+			System.out.println(entry.getKey()+" "+authors.get(entry.getKey()));
+			for(int i =0; i<current.size();i++){
+				StringBuilder resultBuilder = new StringBuilder();
+				resultBuilder.append(i+1);
+				Set<Entry<String, Integer>> rankSet = current.get(i).entrySet();
+				for(Entry<String, Integer> rankEntry : rankSet){
+					resultBuilder.append(" ").append(rankEntry.getKey()).append(":").append(rankEntry.getValue());
+				}
+				System.out.println(resultBuilder.toString());
+			}
+			System.out.println();
+		}
 
 	}
 
