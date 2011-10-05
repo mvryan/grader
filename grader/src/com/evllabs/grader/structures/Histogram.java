@@ -40,6 +40,10 @@ public class Histogram {
 		return histogram.entrySet();
 	}
 	
+	public Set<String> elementSet(){
+		return histogram.keySet();
+	}
+	
 	public int totalElements(){
 		return total;
 	}
