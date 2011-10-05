@@ -40,7 +40,7 @@ public class Grader {
 					currentRank = new Histogram();
 					currentRanks.add(currentRank);
 				}
-				currentRank.add(line);
+				currentRank.add(line.split(" ")[0]);
 			}
 			counter++;
 		}
