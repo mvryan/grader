@@ -71,8 +71,14 @@ public class Grader {
 			List<String> authorList = new ArrayList<String>(
 					authors.elementSet());
 			Collections.sort(authorList);
+			StringBuilder columnNameBuilder = new StringBuilder();
+			for(String author : authorList){
+				columnNameBuilder.append(author).append(",");
+			}
+			String columnNames = columnNameBuilder.toString();
 			for (String author : authorList) {
 				System.out.println(author);
+				System.out.println(columnNames);
 				for (Histogram current : ranks.get(author)) {
 					StringBuilder lineBuilder = new StringBuilder();
 					for (String element : authorList) {
